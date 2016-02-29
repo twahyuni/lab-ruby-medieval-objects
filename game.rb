@@ -37,7 +37,7 @@ class Player < Person
 end
 
 class Knight < Player
-  def initialize first_name, last_name, health=50, strengh=7
+  def initialize first_name, last_name, health=50, strength=7
     super
   end
 
@@ -47,7 +47,7 @@ class Knight < Player
 end
 
 class Wizard < Player
-  def initialize first_name, last_name, health=20, strengh=75
+  def initialize first_name, last_name, health=20, strength=75
     super
   end
 end
