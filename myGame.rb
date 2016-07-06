@@ -66,7 +66,7 @@ cat = Wizard.new 'Chesire', 'Wizard', 250, 200
 
 # PLOT
 # keep fighting till death... why
-while dog.alive? && cat.alive?
+while dog.alive? && cat.alive? do
   turn = rand(0..1)
   if turn == 1
     dog.attack cat
