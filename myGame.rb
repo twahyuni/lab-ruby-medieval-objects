@@ -69,4 +69,5 @@ cat = Wizard.new 'Chesire', 'Wizard', 250, 200
 while dog.alive? && cat.alive? do
   turn = rand(0..1)
   turn == 1? dog.attack(cat) : cat.attack(dog)
+  puts
 end
