@@ -30,6 +30,7 @@ class Player < Person
     @health -= attack_strength
     @health = 0 unless @health > 0
     p "#{full_name} took #{attack_strength} damages. HP= #{health}"
+    p "RIP #{full_name}" unless alive?
   end
 
   def attack opponent
