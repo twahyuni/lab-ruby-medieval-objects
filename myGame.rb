@@ -29,7 +29,7 @@ class Player < Person
   def take_damage attack_strength
     @health -= attack_strength
     @health = 0 unless @health > 0
-    p "#{full_name} took #{attack_strength} of damages. HP= #{health}"
+    p "#{full_name} took #{attack_strength} damages. HP= #{health}"
   end
 
   def attack opponent
@@ -68,9 +68,5 @@ cat = Wizard.new 'Chesire', 'Wizard', 250, 200
 # keep fighting till death... why
 while dog.alive? && cat.alive? do
   turn = rand(0..1)
-  if turn == 1
-    dog.attack cat
-  else
-    cat.attack dog
-  end
+  turn == 1? dog.attack(cat) : cat.attack(dog)
 end
